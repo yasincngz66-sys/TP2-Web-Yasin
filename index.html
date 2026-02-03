@@ -1,5 +1,155 @@
-<ul>
-    <li><a href="TP1-Web/index.html">TP1 : Protocole HTTP</a></li>
-    <li><a href="TP2-Web/index.html">TP2 : Environnement VSCode</a></li>
-    <li><a href="TP3-Web/index.html">TP3 : Les balises textes</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Yasin - BTS SIO</title>
+    <style>
+        /* --- 1. DESIGN GÉNÉRAL --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9; /* Gris très léger et moderne */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- 2. L'EN-TÊTE (Header) --- */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dégradé Bleu Profond */
+            color: white;
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { margin-top: 10px; font-size: 1.2rem; opacity: 0.9; }
+
+        /* --- 3. LA GRILLE DES PROJETS --- */
+        .container {
+            max-width: 1100px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive automatique */
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+
+        /* --- 4. LES CARTES (CARDS) --- */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none; /* Enlève le souligné des liens */
+            color: #333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid transparent; /* Prépare la bordure colorée */
+        }
+
+        /* Effet quand on passe la souris dessus */
+        .card:hover {
+            transform: translateY(-7px); /* La carte monte */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-top: 5px solid #2a5298; /* Petite barre bleue en haut */
+        }
+
+        .tag {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            flex-grow: 1; /* Pousse le bouton vers le bas */
+        }
+
+        .btn-link {
+            margin-top: 20px;
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .card:hover .btn-link::after {
+            margin-left: 10px; /* La flèche bouge au survol */
+        }
+
+        /* --- 5. PIED DE PAGE --- */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio SIO</h1>
+        <p>Mes projets de développement Web & Réseau</p>
+    </header>
+
+    <div class="container">
+        
+        <a href="TP1-Web/index.html" class="card">
+            <span class="tag">Réseau</span>
+            <h2>TP 1 : Protocole HTTP</h2>
+            <p>Analyse du modèle Client-Serveur. Compréhension des requêtes, des réponses et des codes d'erreurs (404, 200).</p>
+            <span class="btn-link">Voir le projet</span>
+        </a>
+
+        <a href="TP2-Web/index.html" class="card">
+            <span class="tag">Outils Dev</span>
+            <h2>TP 2 : Environnement VSCode</h2>
+            <p>Mise en place de l'environnement de développement professionnel. Utilisation de Git, GitHub et des extensions VSCode.</p>
+            <span class="btn-link">Voir le projet</span>
+        </a>
+
+        <a href="TP3-Web/index.html" class="card">
+            <span class="tag">HTML / CSS</span>
+            <h2>TP 3 : Balises & Textes</h2>
+            <p>Apprentissage de la structure HTML5. Mise en forme de texte (gras, italique, titres) et création de listes.</p>
+            <span class="btn-link">Voir le projet</span>
+        </a>
+
+    </div>
+
+    <footer>
+        © 2026 - Yasin C. | Lycée Algoud-Laffemas
+    </footer>
+
+</body>
+</html>
